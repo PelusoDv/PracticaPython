@@ -22,5 +22,5 @@ print("====== ESTACIONAMIENTO ======")
 vehiculo = input("Ingrese el tipo de vehiculo (Auto, Moto o Bicicleta): ")
 if vehiculo.lower() == "bicicleta" or vehiculo.lower() == "bici":
     print("El valor del estacionamiento es: 50")
-else:
+elif vehiculo.lower() == "moto" or vehiculo.lower() == "auto":
     print("El valor del estacionamiento es: 300")
