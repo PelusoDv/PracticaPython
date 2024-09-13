@@ -12,7 +12,7 @@ cuota = 10000
 turno = input("Ingrese el turno (Mañana, Tarde o Noche): ")
 cantMat = int(input("Ingrese la cantidad de materias: "))
 if turno.lower() == "tarde" and cantMat >= 3:
-    print(f"El valor de la cuota es: {cuota*0.75}")
+    print("El valor de la cuota es: ", cuota*0.75)
 else:
     print(f"El valor de la cuota es: {cuota*0.95}")
 
