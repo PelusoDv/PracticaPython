@@ -4,7 +4,7 @@ promedio = (nota1 + nota2) / 2
 msj = "Progreso del 1er al 2do parcial: "
 
 print()
-print(f"El promedio de las notas es: {promedio}")
+print("El promedio de las notas es:", promedio)
 
 if nota2 >= 7:
     print("Aprobó el segundo parcial")
