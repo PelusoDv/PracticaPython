@@ -1,12 +1,20 @@
-print()
-print("======== Listado de aulas ========")
-diasYaulas = ({"Dia": 1, "Aula": "A-315"}, {"Dia": 2, "Aula": "A-300"}, {"Dia": 3, "Aula": "A-315"}, {"Dia": 4, "Aula": "A-300"}, {"Dia": 5, "Aula": "A-315"}, {"Dia": 6, "Aula": "A-300"})
-print("Dia      Aula")
-for x in diasYaulas:
-    print(x["Dia"], end = " "), print("       " + x["Aula"], end = "\n")
+
+linelenght = 15
+daylenght = 6
+arglenght = 30
 
 print()
-print("======== Carga de edades ========")
+print("="*linelenght + " Listado de aulas " + "="*linelenght)
+dias = [1,2,3,4,5,6]
+print(" "*daylenght + "Dia" + " "*arglenght + "Aula")
+for x in dias:
+    if x % 2 == 0:
+        print(" "*daylenght ,x, end = " "), print(" "*(arglenght-1) + "A- 300", end = "\n")
+    else:
+        print(" "*daylenght ,x, end = " "), print(" "*(arglenght-1) + "A- 315", end = "\n")
+
+print()
+print("="*(linelenght+1) + " Carga de edades " + "="*(linelenght+1))
 contador = 0
 edad = int(input("Ingrese una edad mayor o igual a 18: "))
 while edad < 18:
@@ -16,15 +24,15 @@ print("La edad ingresada es: ", edad)
 print("Se ingreso la edad erroneamente ", contador, " veces")
 
 print()
-print("======== Promedio de notas ========")
+print("="*linelenght + " Promedio de notas " + "="*linelenght)
 notas = 0
 for x in range(5):
     notas = notas + int(input("Ingrese la nota: "))
 print("El promedio de notas es: ", notas/5)
 
 print()
-print("======== Costo del comedor ========")
+print("="*linelenght + " Costo del comedor " + "="*linelenght)
 costo = 1250
-print("Dia      Costo")
+print(" "*daylenght + "Dia" + " "*arglenght + "Costo")
 for x in range(6):
-    print(x + 1 , end = " "), print("       $", costo * (x + 1), end = "\n")
+    print(" "*daylenght ,x + 1 , end = " "), print(" "*(arglenght-1) + "$", costo*(x + 1), end = "\n")

@@ -1,3 +1,4 @@
+
 nota1 = int(input("Ingrese la nota del primer parcial: "))
 nota2 = int(input("Ingrese la nota del segundo parcial: "))
 promedio = (nota1 + nota2) / 2

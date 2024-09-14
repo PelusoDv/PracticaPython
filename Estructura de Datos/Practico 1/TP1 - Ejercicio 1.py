@@ -7,9 +7,9 @@ matricula = int(input("Ingrese monto de la matricula: "))
 cuota = matricula + 1000
 pythonI = 12000/4
 print()
-print("====================================================")
-print("======= Uiversidad de Python - Inscripciones =======")
-print("====================================================")
+print("="*52)
+print("="*7 + " Uiversidad de Python - Inscripciones " + "="*7)
+print("="*52)
 print()
 print("DATOS DE INGRESO:")
 print("Nombre completo: " + nombre)
