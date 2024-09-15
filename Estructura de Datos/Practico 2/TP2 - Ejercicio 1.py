@@ -12,7 +12,7 @@ def carganum():
 
     
 def mayorde3(a, b, c):
-    errmsg = "Ninguno numero es mayor a los demas"
+    errmsg = "No existe un unico numero mayor que los demas"
     if a != b:
         mayor = max(a, b)
         if mayor != c:
