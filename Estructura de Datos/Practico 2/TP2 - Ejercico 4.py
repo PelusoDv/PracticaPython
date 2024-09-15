@@ -14,19 +14,19 @@ print()
 moneda = int(input("¿Con que tipo de moneda desea abonar? (Ingrese el numero correspondiente)\n" + "[1] Pesos - [2] Dolares - [3] Yenes - [4] Guaranies - [5] Otro: "))
 comprador = input("Ingrese su nombre de cliente o empresa\n")
 
-def selecdescuento():
+def descuentomoneda(num):
     contador = 1
     for x in descuentos:
-        if contador == moneda:
+        if contador == num:
             return descuentos[x]
         contador += 1
 
-pagar = (float(cantidad * 1000)) * selecdescuento()
+pagar = (float(cantidad * 1000)) * descuentomoneda(moneda)
 
-def selecmoneda():
+def selecmoneda(num):
     contador = 1
     for x in descuentos:
-        if contador == moneda:
+        if contador == num:
             print(x)
         contador += 1
 
@@ -37,9 +37,9 @@ print("="*52)
 print()
 print("CLIENTE:", comprador)
 print("COMPRA: Zapallos por ", cantidad, "unidades a $1000c/u")
-print("MONEDA DE PAGO: ", end=""), selecmoneda()
-if selecdescuento() < 1:
-    print(f"DESCUENTO: {abs(int(selecdescuento() * 100 - 100))}%")
-elif selecdescuento() > 1:
-    print(f"AUMENTO: {int(selecdescuento() * 100 - 100)}%")
+print("MONEDA DE PAGO: ", end=""), selecmoneda(moneda)
+if descuentomoneda(moneda) < 1:
+    print(f"DESCUENTO: {abs(int(descuentomoneda(moneda) * 100 - 100))}%")
+elif descuentomoneda(moneda) > 1:
+    print(f"AUMENTO: {int(descuentomoneda(moneda) * 100 - 100)}%")
 print("TOTAL A PAGAR: $", pagar)
