@@ -1,11 +1,22 @@
 
-compra = int(input("Ingrese el monto total de la compra: "))
-while compra <= 0:
-    compra = int(input("Error! el monto no puede ser menor a '0' \n" + "Ingrese el monto nuevamente: "))
+while True:
+    try:
+        compra = int(input("Ingrese el monto total de la compra: "))
+        while compra <= 0:
+            compra = int(input('Error! el monto no puede ser menor a "0" \n' + "Ingrese el monto nuevamente: "))
+        break
+    except ValueError:
+        print("Error! debe ingresar un numero entero \n" + "Intente nuevamente")       
 
-pago = int(input("Ingrese el total del dinero abonado: "))
-while pago < compra:
-    pago = int(input("Error! el pago no puede ser menor a la compra \n" + "Ingrese el monto nuevamente: "))
+while True:
+    try:
+        pago = int(input("Ingrese el total del dinero abonado: "))
+        while pago < compra:
+            pago = int(input("Error! el pago no puede ser menor a la compra \n" + "Ingrese el monto nuevamente: "))
+        break
+    except ValueError:
+        print("Error! debe ingresar un numero entero \n" + "Intente nuevamente")
+
 
 def contbilletes(a):
 
