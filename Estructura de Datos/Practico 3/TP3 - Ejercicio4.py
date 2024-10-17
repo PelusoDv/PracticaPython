@@ -105,7 +105,7 @@ def consulta_reserva():
 
 def select_reserva():
     asiento = input("(Escriba el formato de fila-columna, ej: B-4) \n     ")
-    if len(asiento) > 3 or asiento[1] != "-":
+    while len(asiento) > 3 or asiento[1] != "-":
         asiento = input("Error! Ingrese el formato correcto: ")
     nºfila = abcd.index(asiento[:2].upper())
     nºasiento = asiento[2]
