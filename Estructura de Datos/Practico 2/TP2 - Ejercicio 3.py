@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 def monto_compra():
     compra = str()
     intento = 0
@@ -40,6 +41,42 @@ def total_pago():
     return pago
 
 pago = total_pago()
+=======
+def vuelto():
+    first = True
+    while True:
+        try:
+            if first:
+                compra = int(input("Ingrese el monto total de la compra: "))
+                while compra <= 0:
+                    compra = int(input("Error! el monto no puede ser menor a '0' \n" + "Ingrese el monto nuevamente: "))
+            else:
+                compra = int(input("Ingrese el monto de la compra nuevamente: "))
+                while compra <= 0:
+                    compra = int(input("Error! el monto no puede ser menor a '0' \n" + "Ingrese el monto nuevamente: "))
+            break
+        except ValueError:
+            print("Error! El valor debe ser numerico")
+            first = False
+
+    first = True
+    while True:
+        try:
+            if first:
+                pago = int(input("Ingrese el total del dinero abonado: "))
+                while pago < compra:
+                    pago = int(input("Error! el pago no puede ser menor a la compra \n" + "Ingrese el monto nuevamente: "))
+            else:
+                pago = int(input("Ingrese el total del dinero nuevamente: "))
+                while pago < compra:
+                    pago = int(input("Error! el pago no puede ser menor a la compra \n" + "Ingrese el monto nuevamente: "))
+            break
+        except ValueError:
+            print("Error! El valor debe ser numerico")
+            first = False
+    
+    return pago - compra
+>>>>>>> 2284d6e5c3f3979a25bcb0572261c61ee616dbfc
 
 def contbilletes(a):
     billetes = [500,100,50,20,10,5,1]
@@ -54,6 +91,5 @@ def contbilletes(a):
             a -= cantbilletes[index] * x
             if cantbilletes[index] > 0:
                 print(f"{cantbilletes[index]} billetes de ${x}")
-        
-vuelto = pago - compra
-contbilletes(vuelto)
+
+contbilletes(vuelto())
