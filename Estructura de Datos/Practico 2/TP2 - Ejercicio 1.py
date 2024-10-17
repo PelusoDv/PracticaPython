@@ -2,10 +2,10 @@
 numeros = []
 
 def carganum():
-    contador = 0
+    contador = 1
     print("Ingrese 3 numeros positivos para saber cual es el mayor: ")
     for x in range(3):
-        x = numeros.append(float(input(f"{contador+1}º numero: ")))
+        numeros.append(float(input(f"{contador}º numero: ")))
         while numeros[contador] < 0:
             numeros[contador] = (float(input(f"Error! ingrese el {contador+1}º numero nuevamente: ")))
         contador += 1

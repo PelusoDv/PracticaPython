@@ -42,7 +42,7 @@ def programa():
             print(f"{int(monedaydescuentos[selecmoneda(x)] * 100 - 100)}% de aumento", end="\n")
         elif monedaydescuentos[selecmoneda(x)] < 1:
             print(f"{abs(int(monedaydescuentos[selecmoneda(x)] * 100 - 100))}% de descuento", end="\n")
-    moneda= int(input()) - 1
+    moneda = int(input()) - 1
     print()
     recibo(moneda, cantidad)
     print()

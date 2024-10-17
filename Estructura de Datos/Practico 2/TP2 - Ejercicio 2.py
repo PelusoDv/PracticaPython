@@ -6,15 +6,15 @@ def cargafecha():
         if x == 0:
             fecha.append(int(input("Ingrese un Día: ")))
             while fecha[x] < 0:
-                fecha[x] = (int(input("Error! ingrese el dia nuevamente: ")))
+                fecha[x] = (int(input("Error! ingrese un numero positivo: ")))
         elif x == 1:
             fecha.append(int(input("Ingrese un Mes: ")))
             while fecha[x] < 0:
-                fecha[x] = (int(input("Error! ingrese el mes nuevamente: ")))
+                fecha[x] = (int(input("Error! ingrese un numero positivo: ")))
         elif x == 2:
             fecha.append(int(input("Ingrese un Año: ")))
             while fecha[x] < 0:
-                fecha[x] = (int(input("Error! ingrese el año nuevamente: ")))
+                fecha[x] = (int(input("Error! ingrese un numero positivo: ")))
         
 def verifecha(a,b,c):
     dia = False
